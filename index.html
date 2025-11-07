@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> | Portfólio</title>
+  <title>Portfólio | Itália</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
@@ -81,7 +81,7 @@
 </head>
 <body>
   <div class="bg-wrap" aria-hidden="true">
-    <div id="bg" class="bg-image parallax" style="background-image:url('img/IMG_6520.jpg');"></div>
+    <div id="bg" class="bg-image parallax" style="background-image:url('IMG_6520.jpg');"></div>
     <div class="bg-grid"></div>
     <canvas id="particles"></canvas>
   </div>
@@ -90,7 +90,7 @@
     <nav class="nav glass container">
       <div class="brand">
         <span class="badge">ITALIATH</span>
-        <span style="opacity:.85"> Portfólio. eu lhe os aprensento,  trabalho!!! e como minhas experiencias em apenas um Portfólio</span>
+        <span style="opacity:.85">Portfólio — eu lhe apresento meu trabalho e minhas experiências em um só lugar.</span>
       </div>
       <div class="nav-links">
         <a href="#sobre">Sobre</a>
@@ -104,7 +104,7 @@
     <section class="hero">
       <div>
         <h1 class="title glitch" data-text="Itália th">
-          <span class="gradient">Itália th!!! editor e designer motion.</span>
+          <span class="gradient">Itália th — Editor e Designer Motion</span>
         </h1>
         <div class="roles">
           <span class="chip"><span class="dot"></span> Designer Motion</span>
@@ -125,13 +125,8 @@
       </div>
     </section>
 
-    <div class="cards">
-      <article class="glass card"><h3>Motion & VFX</h3><p>Keyframes precisos, RSMB, Partículas, Glows, 3D Camera, transições dinâmicas. Pacote: AE + Plugins.</p><div class="corner"></div></article>
-      <article class="glass card"><h3>Web Interativa</h3><p>Layouts responsivos, animações CSS, microinterações, SEO básico e deploy simples.</p><div class="corner"></div></article>
-      <article class="glass card"><h3>Branding</h3><p>Identidade visual com paleta, tipografia e direção de arte voltada a neon futurista.</p><div class="corner"></div></article>
-    </div>
+    <section id="sobre"><h2>Sobre</h2><p>Trabalho combinando estética futurista com usabilidade. Gosto de transformar ideias em cenas que falam por si: títulos com força, ritmo visual e narrativa em poucos segundos. No front, uso HTML/CSS/JS sempre escrevendo código como arte.</p></section>
 
-    <section id="sobre"><h2>Sobre</h2><p>Trabalho combinando estética futurista com usabilidade. Gosto de transformar ideias em cenas que falam por si: títulos com força, ritmo visual e narrativa em poucos segundos. No front, uso HTML/CSS/JS sempre escrevendo codigos como arte.</p></section>
     <section id="skills"><h2>Skills</h2>
       <div class="skills">
         <span class="skill">After Effects</span>
@@ -146,25 +141,16 @@
       </div>
     </section>
 
-    <section id="projetos">
-      <h2>Projetos</h2>
-      <div class="cards">
-        <article class="glass card"><h3>Lyric Video</h3><p>Projeto de letra sincronizada com partículas e glitch suave, ajuste de ritmo e tipografia cinética.</p><div class="corner"></div></article>
-        <article class="glass card"><h3>Landing Neon</h3><p>Landing page com grid holográfico, parallax e tipografia Orbitron.</p><div class="corner"></div></article>
-        <article class="glass card"><h3>Overlay Stream</h3><p>Overlay com alertas e transições curtas, layout responsivo e paleta dual-tone.</p><div class="corner"></div></article>
-      </div>
-    </section>
-
-    <section id="contato"><h2>Contato</h2><p>Disponível para freelas, colaborações e projetos com estética cinematográfica. instagram: @italia_th</p></section>
+    <section id="contato"><h2>Contato</h2><p>📸 Instagram: <a href="https://instagram.com/italia_th" target="_blank" style="color:#ff4dff;text-decoration:none">@italia_th</a></p></section>
   </main>
 
-  <footer>© <span id="year"></span> Itália. Visual + Motion + Web. Escrevo código como arte. Quem entende, aplaude. Quem não, estuda.</footer>
+  <footer>© <span id="year"></span> Itália. Visual + Motion + Web. Escrevo código como arte.</footer>
 
-    <!-- Áudio com atraso -->
-  <audio id="audio" src="music/ytmp3free.cc_dark-aria-lv2-solo-leveling-episode-6-ost-insert-song-cover-youtubemp3free.org.mp3"></audio>
+  <audio id="audio" src="ytmp3free.cc_dark-aria-lv2-solo-leveling-episode-6-ost-insert-song-cover-youtubemp3free.org.mp3"></audio>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
     const typerEl = document.getElementById('typer');
     const phrases = ['Designer Motion','Adobe After Effects','Programação Visual','Web: HTML | CSS | JS','Python'];
     let pi=0, ci=0, deleting=false;
@@ -184,26 +170,22 @@
     window.addEventListener('resize',resize);resize();
     function makeStars(n){stars=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+0.3,s:Math.random()*0.6+0.2}));}
     makeStars(160);
-    function loop(){ctx.clearRect(0,0,w,h);for(const st of stars){st.y+=st.s;if(st.y>h)st.y=-4;ctx.beginPath();ctx.arc(st.x,st.y,st.r,0,Math.PI*2);ctx.fillStyle='rgba(41,227,255,0.85)';ctx.fill();}requestAnimationFrame(loop);}
+    function loop(){ctx.clearRect(0,0,w,h);for(const st of stars){st.y+=st.s;if(st.y>h)st.y=-4;ctx.beginPath();ctx.arc(st.x,st.y,st.r,0,Math.PI*2);ctx.fillStyle='rgba(255,0,0,0.85)';ctx.fill();}requestAnimationFrame(loop);}
     loop();
 
-    // --- início do truque pra tocar minha música sozinho 
+    // música toca sozinha depois de 4 segundos
     window.addEventListener("DOMContentLoaded", () => {
       const audio = document.getElementById("audio");
-      // espera 4 segundos e tenta tocar
       setTimeout(() => {
-        audio.volume = 0.2; // alterar volume pra mim não esquc
+        audio.volume = 0.3;
         const playPromise = audio.play();
         if (playPromise !== undefined) {
           playPromise.catch(() => {
-          
             document.body.addEventListener("click", () => audio.play(), { once: true });
           });
         }
       }, 4000);
     });
-    // sapoha ta dando erro em quase tudolabiasbvihdvjahmsvd hjkasvdisabjkd
   </script>
 </body>
 </html>
-
