@@ -27,7 +27,24 @@
       line-height:1.4; overflow-x:hidden;
     }
     .bg-wrap{position:fixed; inset:0; z-index:-3;}
-    .bg-image{position:absolute; inset:0; background-size:cover; background-position:center; filter: saturate(105%) brightness(0.9); opacity:0.35; transition:opacity .4s ease, transform .6s ease;}
+    .bg-image{
+  position:absolute;
+  inset:0;
+  background-image:url('IMG_6520.jpg');
+  background-size:cover;
+  background-position:center;
+  filter:saturate(105%) brightness(0.9);
+  opacity:0.35;
+  transition:opacity .4s ease, transform .6s ease;
+}
+
+@media (max-width:768px){
+  .bg-image{
+    background-image:url('IMG_MOBILE.jpg');
+    background-size:cover;
+    background-position:center;
+  }
+}
     .bg-image.parallax{transform: translateY(var(--parallax,0px));}
     .bg-grid{position:absolute; inset:0; background-image:
       linear-gradient(to right, var(--grid) 1px, transparent 1px),
@@ -81,7 +98,7 @@
 </head>
 <body>
   <div class="bg-wrap" aria-hidden="true">
-    <div id="bg" class="bg-image parallax" style="background-image:url('IMG_6520.jpg');"></div>
+    <div id="bg" class="bg-image parallax"></div>
     <div class="bg-grid"></div>
     <canvas id="particles"></canvas>
   </div>
