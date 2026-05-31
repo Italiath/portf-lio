@@ -104,7 +104,7 @@
 .skill:hover{
   transform:translateY(-4px);
 
-  border-color:#ff0000;
+  border-color:#ffbf00;
 
   box-shadow:
     0 0 10px rgba(255,191,0,.6),
@@ -118,10 +118,38 @@
     .glitch::before,.glitch::after{content:attr(data-text); position:absolute; inset:0; pointer-events:none; mix-blend-mode:screen}
     .glitch::before{transform:translate(1px,0); color:#00f4ff66; clip-path: polygon(0 0, 100% 0, 100% 30%, 0 30%);}
     .glitch::after{transform:translate(-1px,0); color:#ff58ff66; clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%)}
+    .glitch::after{
+  transform:translate(-1px,0);
+  color:#ff58ff66;
+  clip-path:polygon(0 70%,100% 70%,100% 100%,0 100%);
+}
+
+/* = GLOW DO MOUSE = */
+
+.mouse-glow{
+  position:fixed;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:-2;
+  background:radial-gradient(
+    circle,
+    rgba(255,191,0,.08) 0%,
+    rgba(255,191,0,.03) 40%,
+    transparent 70%
+  );
+
+  transform:translate(-50%,-50%);
+  filter:blur(80px);
+}
   </style>
 </head>
 <body>
-  <div class="bg-wrap" aria-hidden="true">
+
+<div class="mouse-glow"></div>
+
+<div class="bg-wrap" aria-hidden="true">
     <div id="bg" class="bg-image parallax"></div>
     <div class="bg-grid"></div>
     <canvas id="particles"></canvas>
@@ -213,6 +241,12 @@
     makeStars(160);
     function loop(){ctx.clearRect(0,0,w,h);for(const st of stars){st.y+=st.s;if(st.y>h)st.y=-4;ctx.beginPath();ctx.arc(st.x,st.y,st.r,0,Math.PI*2);ctx.fillStyle='rgba(255,0,0,0.85)';ctx.fill();}requestAnimationFrame(loop);}
     loop();
+    const glow = document.querySelector(".mouse-glow");
+
+document.addEventListener("mousemove", (e) => {
+  glow.style.left = e.clientX + "px";
+  glow.style.top = e.clientY + "px";
+});
 
     // música toca sozinha depois de 4 segundos
     window.addEventListener("DOMContentLoaded", () => {
